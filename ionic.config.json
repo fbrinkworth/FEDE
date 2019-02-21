@@ -1,5 +1,7 @@
 {
   "name": "FEDE",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }
