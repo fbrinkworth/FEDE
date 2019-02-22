@@ -1,0 +1,13 @@
+{
+    "app": {
+        "chooselang": "Lang"
+    },
+    "welcome": {
+        "title": "Welcome to FIDI",
+        "german": "German",
+        "english": "English",
+        "spanish": "Spanish",
+        "signup": "Sign Up",
+        "login": "Log In"
+    }
+}

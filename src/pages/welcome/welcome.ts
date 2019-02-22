@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Platform, IonicPage, NavController, NavParams, IonicApp } from 'ionic-angular';
+import { Platform, IonicPage, NavController, NavParams} from 'ionic-angular';
 import { TabsPage } from '../tabs/tabs';
 import { InAppBrowser } from '@ionic-native/in-app-browser'; 
 import { TranslateService } from '@ngx-translate/core';
