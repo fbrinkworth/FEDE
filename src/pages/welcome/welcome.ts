@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Platform, IonicPage, NavController, NavParams, IonicApp } from 'ionic-angular';
 import { TabsPage } from '../tabs/tabs';
 import { InAppBrowser } from '@ionic-native/in-app-browser'; 
+import { TranslateService } from '@ngx-translate/core';
 
 /**
  * Generated class for the WelcomePage page.
@@ -16,10 +17,31 @@ import { InAppBrowser } from '@ionic-native/in-app-browser';
   templateUrl: 'welcome.html'
 })
 export class WelcomePage {
-  constructor(public platform: Platform, public navCtrl: NavController, public navParams: NavParams, public iab: InAppBrowser,) {}
+  idioms: any[] = [];
+
+  constructor(public platform: Platform, public navCtrl: NavController, public navParams: NavParams, public iab: InAppBrowser, private translateService: TranslateService) {
+    this.idioms = [
+      {
+        value: 'es',
+        label: 'Español'
+      },
+      {
+        value: 'en',
+        label: 'Ingles'
+      },
+      {
+        value: 'pt',
+        label: 'Portugués'
+      }
+    ];
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad WelcomePage');
+  }
+
+  choose(lang) {
+    this.translateService.use(lang);
   }
 
   login() {

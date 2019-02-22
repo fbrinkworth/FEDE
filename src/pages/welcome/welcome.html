@@ -1,23 +1,37 @@
 <ion-content padding id="welcome">
-    <img src="assets/imgs/logo.png" class="logo" />
-    <ion-grid>
-        <ion-row>
-            <ion-col>
-                <h1>Welcome to Your App</h1>
-            </ion-col>
-        </ion-row>
-    </ion-grid>
+  <img src="assets/imgs/logo.png" class="logo" />
+  <ion-list>
+    <ion-item>
+      <ion-label>Escoge el idioma</ion-label>
+      <ion-select (ionChange)="choose($event)">
+        <ion-option *ngFor="let item of idioms" [value]="item.value">
+          {{ item.label }}
+        </ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <h1>{{ "WELCOME" | translate }}</h1>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
-    <ion-grid>
-        <ion-row>
-            <ion-col center text-center>
-                <button ion-button full color="success" (click)="signup()">Sign up</button>
-            </ion-col>
-        </ion-row>
-        <ion-row>
-            <ion-col center text-center>
-                <button ion-button full color="lightText" (click)="login()">Log in</button>
-            </ion-col>
-        </ion-row>
-    </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col center text-center>
+        <button ion-button full color="success" (click)="signup()">
+          Sign up{{ "SIGNUP" | translate }}
+        </button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col center text-center>
+        <button ion-button full color="lightText" (click)="login()">
+          Log in{{ "LOGIN" | translate }}
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
